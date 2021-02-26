@@ -40,6 +40,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pretty-quick --staged"
+    }
+  },
   "lint-staged": {
     "*.(js|css)": [
       "npm run format",
@@ -49,11 +54,6 @@
       "npm run lint:fix",
       "npm run lint"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
-    }
   },
   "devDependencies": {
     "eslint": "^7.20.0",
