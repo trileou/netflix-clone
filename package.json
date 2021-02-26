@@ -41,7 +41,14 @@
     ]
   },
   "lint-staged": {
-    "*.js": "eslint"
+    "*.(js|css)": [
+      "npm run format",
+      "git add"
+    ],
+    ".js": [
+      "npm run lint:fix",
+      "npm run lint"
+    ]
   },
   "husky": {
     "hooks": {
