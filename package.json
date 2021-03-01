@@ -50,7 +50,7 @@
       "prettier --write",
       "git add"
     ],
-    "{src}./**/*.": [
+    "{src}./**/*.{.js}": [
       "npm run lint-fix",
       "npm run lint",
       "git add"
